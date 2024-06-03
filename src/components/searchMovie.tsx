@@ -5,11 +5,11 @@ import {useSearchParams, useRouter} from "next/navigation";
 import {useDebouncedCallback} from 'use-debounce'
 
 const SearchMovie = () => {
-    const searchParams:any = useSearchParams();
+   // const searchParams:any = useSearchParams();
     const {replace} = useRouter();
 
     const handleOnChange =useDebouncedCallback( (value: string) => {
-        const params = new URLSearchParams(searchParams);
+        const params = new URLSearchParams();
         if(value){
             params.set("query", value);
         }else {
